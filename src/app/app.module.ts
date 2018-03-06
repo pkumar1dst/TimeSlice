@@ -1,14 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { PreferenceComponent } from './components/preference/preference.component';
+import { TimeSliceTableComponent } from './components/time-slice-table/time-slice-table.component';
+import { TimeSliceButtonComponent } from './components/time-slice-button/time-slice-button.component';
+import { CalenderComponent } from './components/calender/calender.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HeaderComponent,
+    HomeComponent,
+    PreferenceComponent,
+    TimeSliceTableComponent,
+    TimeSliceButtonComponent,
+    CalenderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: 'login', component: LoginComponent },
+      { path: 'home', component: HomeComponent },
+      {path: 'preference', component: PreferenceComponent},
+      {path: 'preferenceToggle', component: TimeSliceButtonComponent},
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
