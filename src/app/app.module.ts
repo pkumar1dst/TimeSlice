@@ -10,7 +10,7 @@ import { PreferenceComponent } from './components/preference/preference.componen
 import { TimeSliceTableComponent } from './components/time-slice-table/time-slice-table.component';
 import { TimeSliceButtonComponent } from './components/time-slice-button/time-slice-button.component';
 import { CalenderComponent } from './components/calender/calender.component';
-
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { CalenderComponent } from './components/calender/calender.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'home', component: HomeComponent },
