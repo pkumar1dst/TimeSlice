@@ -11,6 +11,8 @@ import { TimeSliceTableComponent } from './components/time-slice-table/time-slic
 import { TimeSliceButtonComponent } from './components/time-slice-button/time-slice-button.component';
 import { CalenderComponent } from './components/calender/calender.component';
 import {FormsModule} from '@angular/forms';
+import {DataService} from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'home', component: HomeComponent },
@@ -33,7 +36,7 @@ import {FormsModule} from '@angular/forms';
 
     ])
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

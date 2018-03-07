@@ -1,3 +1,43 @@
-<p>
-  preference works!
-</p>
+
+<app-header></app-header>
+<!-- <div class="col-md-3">
+        <h4>Marketing</h4>
+        <ul *ngFor="let val of data.marketing">
+                <li >
+                  {{ val }}
+                </li>
+        </ul>
+</div>
+<div class="col-md-3">
+        <h4>Financials</h4>
+        <ul *ngFor="let val of data.financials">
+                <li >
+                  {{ val }}
+                </li>
+        </ul>
+</div>
+<div class="col-md-3">
+        <h4>Operations</h4>
+        <ul *ngFor="let val of data.operations">
+                <li >
+                  {{ val }}
+                </li>
+        </ul>
+</div>
+<div class="col-md-3">
+        <h4>SupplyChain</h4>
+        <ul *ngFor="let val of data.supplychain">
+                <li >
+                  {{ val }}
+                </li>
+        </ul>
+</div>  -->
+<div class='container'>
+<div class="col-md-3" *ngFor="let val of prefernceArray">
+        <ul *ngFor="let val1 of val" >
+                <li >
+                  <input type="checkbox"/>{{val1}}
+                </li>
+        </ul>
+</div>
+</div>
