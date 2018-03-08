@@ -13,6 +13,7 @@ export class PreferenceComponent implements OnInit {
   title = 'prakash';
   constructor(private dataService: DataService) {
     this.getPrefernceData();
+   // this.prefernceSelected();
   }
   ngOnInit() {
     // const data = this.dataService.dummyObject;
@@ -28,5 +29,4 @@ export class PreferenceComponent implements OnInit {
       console.log(this.prefernceArray);
      });
   }
-
 }

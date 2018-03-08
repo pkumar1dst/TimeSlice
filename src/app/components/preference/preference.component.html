@@ -32,7 +32,15 @@
                 </li>
         </ul>
 </div>  -->
-<div class='container'>
+<div class='prefarencePage'>
+    <h1 class="page-heading">Preferences</h1>
+ <div class="panel panel-default prefernces-container">
+ <div class="panel-heading">Select the event you wish to include:</div>
+ <div class="panel-body prefernces-list">
+ <li class='col-md-3'><i class="fa fa-bullhorn fa-sm"> </i>MARKETING</li>
+ <li class='col-md-3'><i class="far fa-money-bill-alt fa-sm"> </i>FINANCIALS</li>
+ <li class='col-md-3'><i class="fa fa-cogs fa-sm"> </i>OPERATIONS</li>
+ <li class='col-md-3'><i class="fa fa-truck fa-sm"> </i>SUPPLY CHAIN</li>
 <div class="col-md-3" *ngFor="let val of prefernceArray">
         <ul *ngFor="let val1 of val" >
                 <li >
@@ -40,4 +48,12 @@
                 </li>
         </ul>
 </div>
+<div class="btn-container">
+        <button type="submit" id='save'class="btn btn-primary btn-primary-orange" onclick="prefernceSelected();">Save</button>
+        <button type="submit" id='cancel'class="btn btn-primary btn-secondary-gray">Cancel</button>
+</div> 
+</div>
+ 
+</div> 
+
 </div>
