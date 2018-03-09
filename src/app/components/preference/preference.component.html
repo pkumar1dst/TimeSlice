@@ -44,12 +44,12 @@
 <div class="col-md-3" *ngFor="let val of prefernceArray">
         <ul *ngFor="let val1 of val" >
                 <li >
-                  <input type="checkbox"/>{{val1}}
+                  <input type="checkbox" [checked]=false (click)='selectedprefernce($event)' value={{val1}}/>{{val1}}
                 </li>
         </ul>
 </div>
 <div class="btn-container">
-        <button type="submit" id='save'class="btn btn-primary btn-primary-orange" onclick="prefernceSelected();">Save</button>
+        <button type="submit" id='save'class="btn btn-primary btn-primary-orange" (click)="prefernceSelected();">Save</button>
         <button type="submit" id='cancel'class="btn btn-primary btn-secondary-gray">Cancel</button>
 </div> 
 </div>

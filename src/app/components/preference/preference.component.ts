@@ -11,12 +11,23 @@ export class PreferenceComponent implements OnInit {
   headerValue: any = '';
   prefernceArray: Array<String> = [];
   title = 'prakash';
+  temp: Array<String> = [];
   constructor(private dataService: DataService) {
     this.getPrefernceData();
    // this.prefernceSelected();
   }
   ngOnInit() {
     // const data = this.dataService.dummyObject;
+  }
+  selectedprefernce($event) {
+     // console.log($event.target.value);
+     if ($event.target.checked && this.temp.indexOf($event.target.value) === -1) {
+        this.temp.push($event.target.value);
+     }else {
+      const index = this.temp.indexOf($event.target.value);
+      this.temp.splice(index, 1);
+     }
+     console.log(this.temp);
   }
   getPrefernceData() {
     return this.dataService.myData()
@@ -28,5 +39,9 @@ export class PreferenceComponent implements OnInit {
       }
       console.log(this.prefernceArray);
      });
+  }
+  prefernceSelected() {
+    sessionStorage.setItem('pref', JSON.stringify(this.temp));
+    console.log(sessionStorage.getItem('pref'));
   }
 }
