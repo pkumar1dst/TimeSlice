@@ -38,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
 
     ])
   ],
-  providers: [DataService, CalenderService],
+  providers: [DataService, CalenderService, RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

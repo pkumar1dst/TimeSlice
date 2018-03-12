@@ -20,11 +20,18 @@
   </div>
 </div>
 <div>
-    <ul *ngFor="let val of dateData.date" >
+  <table class="table">
+    
+    <tr >
+        <th>Events</th>
+      <td *ngFor="let val of dateData.date; let i = index" id={{i}}>{{val}}</td>
+    </tr>
+  </table>
+    <!-- <ul *ngFor="let val of dateData.date" >
             <li >
               {{val}}
             </li>
             
-    </ul>
+          </ul>  -->
     <hr />
     </div>

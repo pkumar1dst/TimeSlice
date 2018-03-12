@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-preference',
@@ -12,7 +13,7 @@ export class PreferenceComponent implements OnInit {
   prefernceArray: Array<String> = [];
   title = 'prakash';
   temp: Array<String> = [];
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router: Router) {
     this.getPrefernceData();
    // this.prefernceSelected();
   }
@@ -35,7 +36,7 @@ export class PreferenceComponent implements OnInit {
       this.data = data;
       this.headerValue = Object.keys(data);
       for (const prop of this.headerValue){
-       this. prefernceArray.push(this.data[prop]);
+       this.prefernceArray.push(this.data[prop]);
       }
       console.log(this.prefernceArray);
      });
@@ -43,5 +44,6 @@ export class PreferenceComponent implements OnInit {
   prefernceSelected() {
     sessionStorage.setItem('pref', JSON.stringify(this.temp));
     console.log(sessionStorage.getItem('pref'));
+    this.router.navigate(['/calender']);
   }
 }
