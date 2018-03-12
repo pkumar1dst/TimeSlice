@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CalenderService} from '../../calender.service';
 
 @Component({
   selector: 'app-calender',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calender.component.css']
 })
 export class CalenderComponent implements OnInit {
-
-  constructor() { }
+  dateData: any = [];
+  constructor(private CalenderService: CalenderService) {
+    this.getDateData();
+  }
 
   ngOnInit() {
   }
-
+  getDateData() {
+    return this.CalenderService.dateData()
+    .subscribe(data => {
+      this.dateData = data;
+      console.log(this.dateData.date);
+     });
+  }
 }

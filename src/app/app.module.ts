@@ -12,6 +12,7 @@ import { TimeSliceButtonComponent } from './components/time-slice-button/time-sl
 import { CalenderComponent } from './components/calender/calender.component';
 import {FormsModule} from '@angular/forms';
 import {DataService} from './data.service';
+import {CalenderService} from './calender.service';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -33,10 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'home', component: HomeComponent },
       {path: 'preference', component: PreferenceComponent},
       {path: 'preferenceToggle', component: TimeSliceButtonComponent},
+      {path: 'calender', component: CalenderComponent},
 
     ])
   ],
-  providers: [DataService],
+  providers: [DataService, CalenderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

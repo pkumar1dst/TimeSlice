@@ -1,3 +1,30 @@
-<p>
-  calender works!
-</p>
+<div class="row">
+  <div class="col-md-4">
+      <h1 class="page-heading"> Timeslice</h1>
+  </div>
+ 
+  <div class="col-md-8 view-buttons dateRange">
+      <label id="dateSelect">
+      <label><b>View:</b></label>
+      <!-- <label><a href="#" class="active">1HR</a></label> -->
+      <label><a href="#" id="d1" class="rangeSel">1D</a></label>
+      <label><a href="#" id="w1" class="rangeSel">1W</a></label>
+      <label><a href="#" id="m1" class="rangeSel">1M</a></label>
+      <label><a href="#" class="btn btn-green-views btn-primary" id="d_1">Today</a></label>
+      <div class="btn-group" role="group">
+         <button type="button" class="btn btn-default"><i class="fas fa-caret-left"></i></button>
+         <button type="button" class="btn btn-default"><i class="fas fa-caret-right"></i></button>
+      </div>
+      </label>
+
+  </div>
+</div>
+<div>
+    <ul *ngFor="let val of dateData.date" >
+            <li >
+              {{val}}
+            </li>
+            
+    </ul>
+    <hr />
+    </div>
